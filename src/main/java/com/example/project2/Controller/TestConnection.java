@@ -13,7 +13,7 @@ public class TestConnection {
         ds.setPassword("123456789");
         ds.setServerName("DESKTOP-5EKOMHK\\SQLEXPRESS01");
         ds.setPortNumber(1433);
-        ds.setDatabaseName("Quanlycuahang");
+        ds.setDatabaseName("QLSV");
 
         ds.setTrustServerCertificate(true);
 
