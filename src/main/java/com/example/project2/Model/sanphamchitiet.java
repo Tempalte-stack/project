@@ -24,14 +24,16 @@ public class sanphamchitiet {
     @Column(name = "idTH")
     private Integer idTH;
 
-    @Column(name = "idSize")
-    private Integer idSize;
+    @ManyToOne
+    @JoinColumn(name = "idSize")
+    private size idSize;
 
-    @Column(name = "idMau")
-    private Integer idMau;
+    @ManyToOne
+    @JoinColumn(name = "idmau")
+    private mau idMau;
 
     @Column(name = "soluong")
-    private String soluong;
+    private String soLuong;
 
     @Column(name = "gia")
     private BigDecimal gia;
@@ -40,11 +42,11 @@ public class sanphamchitiet {
     private String mota;
 
     @Column(name = "hinhanh")
-    private String hinhanh;
+    private String hinhAnh;
 
     @Column(name = "ngaythem")
-    private Date ngaythem;
+    private Date ngayThem;
 
     @Column(name = "tensp")
-    private String tensp;
+    private String tenSP;
 }

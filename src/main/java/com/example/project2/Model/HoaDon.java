@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 @Entity
 @Table(name = "hoadDon")
 @AllArgsConstructor
@@ -17,9 +20,25 @@ public class HoaDon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idHD")
     private Integer idhd;
-    @Column(name = "idNguoiDung")
-    private String idnguoidung;
-    @Column(name = "ngaylap")
-    private String ngaylap;
 
+    @ManyToOne
+    @JoinColumn(name = "idNguoiDung")
+    private NguoiDung idnguoidung;
+
+    @Column(name = "ngaylap")
+    private Date ngaylap;
+
+    @Column (name = "tongTien")
+    private BigDecimal tongtien;
+
+    @Column (name = " ")
+    private String trangthai;
+
+    @ManyToOne
+    @JoinColumn(name = "idKhuyenMai")
+    private KhuyenMai khuyenmai;
+
+    @ManyToOne
+    @JoinColumn(name = "idVoucher")
+    private Voucher voucher;
 }

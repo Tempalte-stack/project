@@ -5,34 +5,30 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.stereotype.Controller;
 
 import java.util.Date;
 
-@Setter
-@Getter
 @Entity
-@Table(name = "NguoiDung")
+@Table(name = "nguoidung")
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class NguoiDung {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idNguoiDung")
-    private Integer idND;
+    private Integer idNguoiDung;
     @Column(name = "ten")
-    private String tenND;
-    @Column (name="diaChi")
+    private String tenNguoiDung;
+    @Column(name = "diaChi")
     private String diaChi;
     @Column(name = "sdt")
-    private Integer soDienThoai;
+    private Integer Sdt;
     @Column(name = "email")
     private String email;
     @Column(name = "ngaySinh")
-    @Temporal(TemporalType.DATE)
     private Date ngaySinh;
     @Column(name = "matKhau")
     private String matKhau;
-
-
 }

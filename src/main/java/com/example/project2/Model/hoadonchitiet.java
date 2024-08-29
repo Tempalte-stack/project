@@ -20,8 +20,9 @@ public class hoadonchitiet {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "idHD")
-    private Integer idHD;
+    @ManyToOne
+    @JoinColumn(name = "idHD")
+    private HoaDon idHD;
 
     @Column(name = "soluong")
     private Integer soluong;
@@ -29,6 +30,7 @@ public class hoadonchitiet {
     @Column(name = "gia")
     private BigDecimal gia;
 
-    @Column(name = "idSPCT")
-    private Integer idSPCT;
+    @ManyToOne
+    @JoinColumn(name = "idSPCT")
+    private sanphamchitiet idSpct;
 }

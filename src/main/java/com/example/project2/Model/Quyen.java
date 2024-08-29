@@ -1,35 +1,24 @@
 package com.example.project2.Model;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
+@Table(name = "quyen")
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class Quyen {
-    private int IDQuyen;
-    private String TenQuyen;
 
-    public Quyen() {
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idquyen")
+    private Integer idquyen;
+    @Column(name = "tenQuyen")
+    private String tenquyen;
 
-    public Quyen(int IDQuyen, String tenQuyen) {
-        this.IDQuyen = IDQuyen;
-        TenQuyen = tenQuyen;
-    }
-
-    public int getIDQuyen() {
-        return IDQuyen;
-    }
-
-    public void setIDQuyen(int IDQuyen) {
-        this.IDQuyen = IDQuyen;
-    }
-
-    public String getTenQuyen() {
-        return TenQuyen;
-    }
-
-    public void setTenQuyen(String tenQuyen) {
-        TenQuyen = tenQuyen;
-    }
 }
