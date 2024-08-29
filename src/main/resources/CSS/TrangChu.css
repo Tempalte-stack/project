@@ -1,0 +1,49 @@
+
+body {
+    background-color: #f8f9fa;
+}
+.search-container {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.menu {
+    background-color: darkgray;
+}
+.header {
+    color: white;
+    padding: 15px 0;
+    position: relative; /* Để sử dụng vị trí tuyệt đối cho .search-container */
+}
+.logo {
+    background-color: #ee3838;
+    padding: 10px;
+}
+.navbar {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.product-image {
+    width: 40%;
+    height: auto;
+}
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.search-container .btn {
+    margin-left: 2px;
+    margin-top: 20px;
+}
