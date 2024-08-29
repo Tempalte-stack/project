@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "ThuongHieu")
+@Table(name = "thuonghieu")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Thuonghieu {
+public class thuonghieu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idthuonghieu")
