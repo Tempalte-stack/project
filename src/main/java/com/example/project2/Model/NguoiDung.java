@@ -1,11 +1,13 @@
 package com.example.project2.Model;
 
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Controller;
 
 import java.util.Date;
 
+@Table(name = "NguoiDung")
 @Setter
 @Getter
 @Controller
