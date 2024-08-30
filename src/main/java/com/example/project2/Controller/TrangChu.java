@@ -10,7 +10,7 @@ import java.util.List;
 public class TrangChu {
     @GetMapping("/trangchu")
     public String home(Model model) {
-        return "TrangChu/trangchu";
+        return "TrangChu/index";
     }
 
 

@@ -4,26 +4,40 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class TestConnection {
-    public static void main(String[] args) {
-        SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setUser("sa");
-        ds.setPassword("123456789");
-        ds.setServerName("DESKTOP-5EKOMHK\\SQLEXPRESS01");
-        ds.setPortNumber(1433);
-        ds.setDatabaseName("QLSV");
 
-        ds.setTrustServerCertificate(true);
 
-        try (Connection conn = ds.getConnection()) {
-            System.out.println("Connection success!");
-            System.out.println(conn.getMetaData());
-        } catch (SQLServerException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        public static String url="jdbc:sqlserver://localhost:1433;databaseName=Project10;encrypt=true;trustServerCertificate=true";
+        public static String user ="sa";
+        public static String pass="12345";
+        static {
+            try{
+                Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            }catch(ClassNotFoundException ex){
+                System.out.println("Khong tim thay driver");
+                ex.printStackTrace();
+            }
+        }
+        public static Connection getConnection(){
+            Connection con = null;
+            try{
+                con= DriverManager.getConnection(url, user, pass);
+            }catch(SQLException ex){
+                System.out.println("Ket noi khong thanh cong .");
+                ex.printStackTrace();
+            }
+            return con;
+        }
+        public static void  main (String[]args){
+            Connection con = getConnection();
+            if(con!= null){
+                System.out.println("sql !");
+
+            }else{
+                System.out.println ("Lỗi !");}
+
         }
     }
-}

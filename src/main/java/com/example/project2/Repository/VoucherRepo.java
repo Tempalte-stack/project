@@ -1,5 +1,4 @@
 package com.example.project2.Repository;
 
-public class NguoiDungRepo {
-
+public class VoucherRepo {
 }
