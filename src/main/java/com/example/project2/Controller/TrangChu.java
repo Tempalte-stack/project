@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 @Controller
 public class TrangChu {
-    @GetMapping("/trangchu")
+    @GetMapping("/index")
     public String home(Model model) {
-        return "TrangChu/trangchu";
+        return "TrangChu/index";
     }
 
 
