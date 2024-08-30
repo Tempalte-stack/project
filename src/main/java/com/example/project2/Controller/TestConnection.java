@@ -2,9 +2,12 @@ package com.example.project2.Controller;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+
+
 
 public class TestConnection {
     public static void main(String[] args) {
